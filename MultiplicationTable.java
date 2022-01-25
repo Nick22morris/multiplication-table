@@ -26,10 +26,10 @@ public class MultiplicationTable {
 		}
 		for(int j = 0; j < grid.length; j++) {
 			for(int i = 0; i < grid[j].length; i++) {
-				int top = grid[0][j];
-				int left = grid[i][0];
+				int top = grid[0][i];
+				int left = grid[j][0];
 				int product = top * left;
-				grid[i][j] = product;
+				grid[j][i] = product;
 				x++;
 			}
 		}
