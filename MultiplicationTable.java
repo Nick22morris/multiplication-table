@@ -25,14 +25,6 @@ public class MultiplicationTable {
 			y++;
 		}
 		
-		//Prints array
-//		for(int arr[] : grid) {
-//			for( int n : arr)
-//				System.out.print(n + " ");
-//			System.out.println();
-//		}
-//		System.out.println();
-		
 		// Creates String Matrix]
 		for(int j = 0; j < grid.length; j++) {
 			for(int i = 0; i < grid[j].length; i++) {
@@ -43,13 +35,6 @@ public class MultiplicationTable {
 				x++;
 			}
 		}
-		
-		//Prints array
-//		for(int arr[] : grid) {
-//			for( int n : arr)
-//				System.out.print(n + " ");
-//			System.out.println();
-//		}
 		
 		// Gets Biggest Value digits
 		int yLen = grid.length - 1;
@@ -73,8 +58,5 @@ public class MultiplicationTable {
 			}
 			System.out.println();
 		}
-		
-		
 	}
-	
 }
