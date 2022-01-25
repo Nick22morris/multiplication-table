@@ -10,7 +10,7 @@ public class MultiplicationTable {
 		grid = new int[rows][columns];
 		create();
 	}
-	public void create() {
+	public String[][] create() {
 		int y = 1;
 		int x = 0;
 		// Sets top axis to 1...10
@@ -24,8 +24,6 @@ public class MultiplicationTable {
 			arr[0] = y;
 			y++;
 		}
-		
-		// Creates String Matrix]
 		for(int j = 0; j < grid.length; j++) {
 			for(int i = 0; i < grid[j].length; i++) {
 				int top = grid[0][j];
@@ -35,8 +33,6 @@ public class MultiplicationTable {
 				x++;
 			}
 		}
-		
-		// Gets Biggest Value digits
 		int yLen = grid.length - 1;
 		int xLen = grid[yLen].length - 1;		
 		int biggest  = grid[yLen][xLen];
@@ -54,9 +50,22 @@ public class MultiplicationTable {
 					added++;
 				}
 				newMatrix[j][i] = sVal;
-				System.out.print(sVal + "  ");
 			}
+		}
+		
+		return newMatrix;
+	}
+	public String toString() {
+		String m[][] = create();
+		String txt = "";
+		for(int j = 0; j < m.length; j++) {
+			for(int i = 0; i < m[j].length; i++) {
+				String val = m[j][i];
+				txt += val;
+			}
+			txt += "\n";
 			System.out.println();
 		}
+		return txt;
 	}
 }
